@@ -1,0 +1,20 @@
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 0;
+    width: 100%;
+    background: #ffffbb;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+html {
+    color: -internal-root-color;
+}
