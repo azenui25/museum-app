@@ -30,6 +30,19 @@ img {
     height: auto;
 }
 
+.artObject {
+    max-width: 80%;
+    max-height: 20rem;
+    margin: 1rem;
+}
+
+#gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 p {
     background-color: whitesmoke;
     font-size: 16px;
