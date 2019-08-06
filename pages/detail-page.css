@@ -7,10 +7,10 @@ p {
 }
 
 body {
+    background-color: blue;
     margin: 0;
     padding: 2rem 0;
     width: 100%;
-    background: #ffffbb;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
