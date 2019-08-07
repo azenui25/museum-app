@@ -15,7 +15,7 @@ function submitComment() {
     const p = document.createElement('p')
 
     // adjust the element we created
-    h3.innerHTML = $ { name }
+    h3.innerHTML = `${name}`
     said:
         p.innerHTML = msg
     comment.classList.add('comment')
