@@ -22,4 +22,13 @@ function submitComment() {
     comment.appendChild(h3)
     comment.appendChild(p)
     console.log(comment)
+
+    // display the element on the page 
+    const commentSection = document.getElementById('comment')
+    console.log(commentSection)
+    commentSection.appendChild(comment)
+
+    // reset form values
+    inputField.value = null
+    textArea.value = null
 }
