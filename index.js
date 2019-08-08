@@ -327,7 +327,29 @@ const data = {
 function displayPainting(painting) {
     const title = painting.title
     const src = painting.webImage.url
+    const imageWidth = painting.webImage.width
+    const imageAUTHOR = painting.principalOrFirstMaker
     const gallery = document.getElementById('gallery')
+
+    const longTitle = painting.longTitle
+    const year = longTitle.slice(-4)
+
+
+
+
+
+
+
+
+    if (imageWidth <= 500) {
+        return false
+    }
+
+    if (imageAUTHOR.includes("Honthorst")) {
+        return false
+    } else if (year > 1800) {
+        return false
+    }
 
 
     const a = document.createElement('a')
@@ -338,6 +360,9 @@ function displayPainting(painting) {
     img.alt = title
     img.classList.add('artObject')
 
+
+
+
     a.appendChild(img)
     gallery.appendChild(a)
 }
@@ -345,7 +370,7 @@ function displayPainting(painting) {
 function displayAllPaintings(paintings) {
     for (let i = 0; i < paintings.length; i++) {
         displayPainting(paintings[i])
-        console.log('hello')
+
     }
 }
 
