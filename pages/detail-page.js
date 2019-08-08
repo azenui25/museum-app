@@ -42,6 +42,28 @@ function submitComment() {
         return false
     }
 
+    function capitalize(word) {
+        const firstCharacterOfWord = word.charAt(0);
+        const firstCharacterOfWordCapitalized = firstCharacterOfWord.toUpperCase()
+        word = firstCharacterOfWordCapitalized + word.slice(1)
+        return word
+    }
+
+    function curseWordsChecker(curses, message, comment) {
+        for (let i = 0; i < curses.length; i++) {
+            const word = curses[i]
+            const decapitalized = message.toLowerCase()
+
+            if (decapitalized.includes(word)) {
+                message = message + " !Warning: this comment has been flagged as offensive!"
+                comment.classList.add('offensive')
+                return message
+            }
+        }
+
+        return message
+    }
+
     function submitComment() {
         // ... gather data logic ..
 
@@ -49,6 +71,7 @@ function submitComment() {
         if (doesNotPassAllValidations(name, msg)) {
             return null
         }
+
 
     }
 
